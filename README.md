@@ -85,8 +85,6 @@ brew install php
 
 ## What is HTTP
 
-
-
 ## Say Hello to PHP
 
 ## Magical algorithm
@@ -103,7 +101,7 @@ brew install php
 
 - <https://tailwindcss.com>
 
-### Say Hello to Database
+## Say Hello to Database
 
 ## Say Hello to Laravel
 
@@ -124,6 +122,7 @@ brew install php
 
 - 《鸟哥的 Linux 私房菜》
 
+## Say Hello to GitHub Actions
 ## Say Hello to Docker
 ## Say Hello to VS Code
 
