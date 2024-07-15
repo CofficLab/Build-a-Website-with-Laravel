@@ -47,6 +47,18 @@ You can use the following command to install GIT:
 brew install git
 ```
 
+After installation is complete, enter this code in the terminal app and hit enter to run.
+
+```bash
+git --version
+```
+
+If you see the following output, congratulations! You have successfully installed GIT.
+
+```bash
+git version 2.34.0
+```
+
 ### Install GitHub Desktop
 
 What is GitHub Desktop?
@@ -67,13 +79,29 @@ Please refer to <https://code.visualstudio.com> for more information.
 
 ### Install Node.js
 
+A very useful software that many projects require, just install it!
+
 You can use the following command to install Node.js:
 
 ```bash
 brew install node
 ```
 
+After installation is complete, enter this code in the terminal app and hit enter to run.
+
+```bash
+node -v
+```
+
+If you see the following output, congratulations! You have successfully installed Node.js.
+
+```bash
+v17.3.0
+```
+
 ### Install PHP
+
+We use PHP as the main programming language for developing websites.
 
 You can use the following command to install PHP:
 
@@ -81,9 +109,27 @@ You can use the following command to install PHP:
 brew install php
 ```
 
+After installation is complete, enter this code in the terminal app and hit enter to run.
+
+```bash
+php -v
+```
+
+If you see the following output, congratulations! You have successfully installed PHP.
+
+```bash
+PHP 8.1.0 (cli) (built: Sep 25 2021 16:37:49) (NTS)
+Copyright (c) The PHP Group
+......
+```
+
 ## What is API
 
+![API](./images/api.png)
+
 ## What is HTTP
+
+![HTTP](./images/http.png)
 
 ## Say Hello to PHP
 
@@ -122,11 +168,11 @@ brew install php
 
 - 《鸟哥的 Linux 私房菜》
 
-## Say Hello to GitHub Actions
-## Say Hello to Docker
-## Say Hello to VS Code
-
 ## Become an Expert
+
+### Say Hello to GitHub Actions
+
+### Say Hello to Docker
 
 ### References
 
