@@ -10,13 +10,6 @@ All further operations will be performed on macOS because the author uses macOS.
 
 Users in mainland China may encounter many problems, please make sure that your network can smoothly access certain international websites.
 
-### Find an AI assistant
-
-Do not do everything by yourself. Here are some great AI assistants:
-
-- <https://sider.ai/download>
-- <https://monica.im>
-
 If you encounter any programming problems, try asking your AI assistant first.
 
 ### Say Hello to the Terminal App
