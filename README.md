@@ -167,7 +167,7 @@ Open this project with Visual Studio Code and open the terminal app by pressing 
 
 Follow the steps below to print the time.
 
-1. Create a new file called "time.php" in the `docs/php` directory of this project.
+1. Create a new file called `time.php` in the `docs/php` directory of this project.
 2. Write the following code in the file:
 
     ```php
@@ -186,6 +186,45 @@ Follow the steps below to print the time.
     ```bash
     2021-12-31 16:45:09
     ```
+
+Now, you have learned how to write a PHP file and run it. 
+
+## Function
+
+Create a new file called `function.php` in the `docs/php` directory of this project.
+
+Write a function to print the Fibonacci sequence. Fill in the missing code.
+
+```php
+<?php
+
+echo fibonacci(100);
+
+function fibonacci($n) {
+    // your code here
+}
+```
+
+## Array Sorting
+
+Create a new file called `array_sorting.php` in the `docs/php` directory of this project.
+
+Here is a function that takes two arrays and merges them into one and sort in ascending order. Fill in the missing code.
+
+```php
+<?php
+$a = [1, 2, 5];
+$b = [3, 4];
+
+$c = array_merge_and_sort($a, $b);
+print_r($c);
+
+function array_merge_and_sort($a, $b) {
+    // your code here
+}
+```
+
+The array `c` should be: `[1,2,3,4,5]`.
 
 ## Magical algorithm
 
