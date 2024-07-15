@@ -81,6 +81,12 @@ Simply put, it helps us write code.
 
 Please refer to <https://code.visualstudio.com> for more information.
 
+After installation is complete, try to open this project with Visual Studio Code with the following steps:
+
+![Visual Studio Code](./images/vscode.png)
+
+Now, you can see all the code of this project.
+
 ### Install Node.js
 
 A very useful software that many projects require, just install it!
@@ -126,6 +132,24 @@ PHP 8.1.0 (cli) (built: Sep 25 2021 16:37:49) (NTS)
 Copyright (c) The PHP Group
 ......
 ```
+
+## Submit a pull request
+
+### What is a pull request?
+
+A pull request is a way to suggest changes to someone else's project. 
+
+This project is not yours, but if you want to submit some code, please initiate a pull request.
+
+### How to submit a pull request?
+
+1. Fork this project to your own GitHub account.
+2. Clone this project to your local computer.
+3. Create a new branch called "playground{random number}".
+4. Create a new file called "playground.md".
+5. Commit your code to the new branch.
+6. Push the new branch to your GitHub account.
+7. Click the "New pull request" button on your GitHub account and select the new branch you just pushed to create a pull request.
 
 ## What is API
 
