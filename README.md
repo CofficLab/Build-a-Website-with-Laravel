@@ -69,6 +69,10 @@ Simply put, it helps us manage code.
 
 Please refer to <https://desktop.github.com> for more information.
 
+After installation is complete, try to open this project with GitHub Desktop with the following steps:
+
+![GitHub Desktop](./images/github_desktop.jpg)
+
 ### Install Visual Studio Code
 
 What is Visual Studio Code?
