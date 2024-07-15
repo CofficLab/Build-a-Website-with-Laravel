@@ -2,13 +2,13 @@
 
 This project documents the entire process of me developing a website that sells APIs. It would be my great honor if it can help you.
 
-![APIStore](./images/project.png)
+![APIStore](./docs/images/project.png)
 
 ## Before you start
 
 All further operations will be performed on macOS because the author uses macOS.  
 
-Users in mainland China may encounter many problems, please make sure that your network can smoothly access certain international websites. 
+Users in mainland China may encounter many problems, please make sure that your network can smoothly access certain international websites.
 
 ### Find an AI assistant
 
@@ -71,7 +71,7 @@ Please refer to <https://desktop.github.com> for more information.
 
 After installation is complete, try to open this project with GitHub Desktop with the following steps:
 
-![GitHub Desktop](./images/github_desktop.jpg)
+![GitHub Desktop](./docs/images/github_desktop.jpg)
 
 ### Install Visual Studio Code
 
@@ -83,7 +83,7 @@ Please refer to <https://code.visualstudio.com> for more information.
 
 After installation is complete, try to open this project with Visual Studio Code with the following steps:
 
-![Visual Studio Code](./images/vscode.png)
+![Visual Studio Code](./docs/images/vscode.png)
 
 Now, you can see all the code of this project.
 
@@ -137,7 +137,7 @@ Copyright (c) The PHP Group
 
 ### What is a pull request?
 
-A pull request is a way to suggest changes to someone else's project. 
+A pull request is a way to suggest changes to someone else's project.
 
 This project is not yours, but if you want to submit some code, please initiate a pull request.
 
@@ -153,17 +153,45 @@ This project is not yours, but if you want to submit some code, please initiate 
 
 ## What is API
 
-![API](./images/api.png)
+![API](./docs/images/api.png)
 
 ## What is HTTP
 
-![HTTP](./images/http.png)
+![HTTP](./docs/images/http.png)
 
 ## Say Hello to PHP
+
+## Print the time
+
+Open this project with Visual Studio Code and open the terminal app by pressing `Ctrl + ~`.
+
+Follow the steps below to print the time.
+
+1. Create a new file called "time.php" in the `docs/php` directory of this project.
+2. Write the following code in the file:
+
+    ```php
+    <?php
+    echo date("Y-m-d H:i:s");
+    ```
+
+3. Enter this code within the terminal app and hit enter to run:
+
+    ```bash
+    php time.php
+    ```
+
+4. If you see the following output, congratulations! You have successfully printed the time.
+
+    ```bash
+    2021-12-31 16:45:09
+    ```
 
 ## Magical algorithm
 
 ### Reference material
+
+If you want to learn more, the following are some references.
 
 - 《算法图解》
 - 《大话数据结构》
