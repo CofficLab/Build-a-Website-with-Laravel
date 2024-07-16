@@ -300,7 +300,7 @@ What is Laravel?
 
 Laravel is a PHP framework. It provides many useful tools to help you build web applications quickly and easily.
 
-### Install Composer 
+### Install Composer
 
 Composer is a package manager for PHP. It helps you install and update the dependencies of your project.
 
@@ -321,7 +321,6 @@ Follow the steps below to install Laravel and run it.
     ```bash
     .../APIStore
     ```
-
 
 2. Install Laravel by running the following code in the terminal app:
 
@@ -361,6 +360,10 @@ TailwindCSS is a utility-first CSS framework.
 Follow this link to make tailwindcss work with Laravel: <https://tailwindcss.com/docs/guides/laravel>
 
 After that, you need to learn how to build beautiful web pages with tailwindcss and Laravel. Just practice within the store-app project.
+
+#### References
+
+- <https://tailwindcss.com>
 
 ## Say Hello to Linux
 
@@ -406,12 +409,6 @@ JavaScript is a programming language that can be used in many different ways.
 
 - <https://developer.mozilla.org/zh-CN/docs/Web>
 
-
-
-#### References
-
-- <https://tailwindcss.com>
-
 ### GitHub Actions
 
 GitHub Actions is a continuous integration and delivery (CI/CD) tool.
@@ -419,8 +416,6 @@ GitHub Actions is a continuous integration and delivery (CI/CD) tool.
 ### Docker
 
 Docker is a containerization technology.
-
-### Architecture
 
 #### References
 
