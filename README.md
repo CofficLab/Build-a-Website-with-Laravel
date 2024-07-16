@@ -194,17 +194,9 @@ This project is not yours, but if you want to submit some code, please initiate 
 6. Push the new branch to your GitHub account.
 7. Click the "New pull request" button on your GitHub account and select the new branch you just pushed to create a pull request.
 
-## What is API
-
-![API](./docs/images/api.png)
-
-## What is HTTP
-
-![HTTP](./docs/images/http.png)
-
 ## Say Hello to PHP
 
-## Print the time
+### Print the time
 
 Open this project with Visual Studio Code and open the terminal app by pressing `Ctrl + ~`.
 
@@ -232,7 +224,7 @@ Follow the steps below to print the time.
 
 Now, you have learned how to write a PHP file and run it.
 
-## Function
+### Function
 
 Create a new file called `function.php` in the `docs/php` directory of this project.
 
@@ -248,7 +240,7 @@ function fibonacci($n) {
 }
 ```
 
-## Array Sorting
+### Array Sorting
 
 Create a new file called `array_sorting.php` in the `docs/php` directory of this project.
 
@@ -311,6 +303,14 @@ Follow the steps below to install Laravel and run it.
 
 - <https://laravel.com>
 - <https://learnku.com/docs/laravel/10.x>
+
+## What is API
+
+![API](./docs/images/api.png)
+
+## What is HTTP
+
+![HTTP](./docs/images/http.png)
 
 ## Become an Expert
 
