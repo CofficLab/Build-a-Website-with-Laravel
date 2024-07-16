@@ -300,6 +300,14 @@ What is Laravel?
 
 Laravel is a PHP framework. It provides many useful tools to help you build web applications quickly and easily.
 
+### Install Composer 
+
+Composer is a package manager for PHP. It helps you install and update the dependencies of your project.
+
+Open this page <https://getcomposer.org/download/> and follow the steps to install Composer.
+
+### Install Laravel
+
 Follow the steps below to install Laravel and run it.
 
 1. Install Laravel by running the following code in the terminal app:
