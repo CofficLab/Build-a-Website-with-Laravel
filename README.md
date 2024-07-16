@@ -23,6 +23,49 @@ If you encounter any programming problems, try asking your AI assistant first.
 
 Every macOS user has a Terminal app. It is the most powerful tool in our arsenal.
 
+- Print the current directory:
+
+    ```bash
+    pwd
+    ```
+
+- List all files in the current directory:
+
+    ```bash
+    ls
+    ```
+
+- Change the current directory:
+
+    ```bash
+    cd ~/Desktop
+    ```
+
+- Create a new directory:
+
+    ```bash
+    mkdir new_directory
+    ```
+
+- Create a new file:
+
+    ```bash
+    touch new_file.txt
+    ```
+
+    You can also use the following command to create a new file:
+
+    ```bash
+    echo "Hello, World!" > new_file.txt
+    ```
+
+    The above command will create a new file named `new_file.txt` and write the text "Hello, World!" in it.
+- Delete a file:
+
+    ```bash
+    rm new_file.txt
+    ```
+
 ### Install Homebrew
 
 What is Homebrew?
@@ -187,7 +230,7 @@ Follow the steps below to print the time.
     2021-12-31 16:45:09
     ```
 
-Now, you have learned how to write a PHP file and run it. 
+Now, you have learned how to write a PHP file and run it.
 
 ## Function
 
@@ -228,7 +271,12 @@ The array `c` should be: `[1,2,3,4,5]`.
 
 ## Magical algorithm
 
-### Reference material
+How to merge two arrays?
+How to sort the elements of an array?
+
+The ideas that come to your mind are called algorithms, and they are the soul of a program. If you have more interest in algorithms, please continue to learn more about them.
+
+### Reference
 
 If you want to learn more, the following are some references.
 
@@ -236,39 +284,70 @@ If you want to learn more, the following are some references.
 - 《大话数据结构》
 - <https://leetcode.cn>
 
-## Say Hello to TailwindCSS
-
-### References
-
-- <https://tailwindcss.com>
-
-## Say Hello to Database
-
 ## Say Hello to Laravel
+
+What is Laravel?
+
+Laravel is a PHP framework. It provides many useful tools to help you build web applications quickly and easily.
+
+Follow the steps below to install Laravel and run it.
+
+1. Install Laravel by running the following code in the terminal app:
+
+    ```bash
+    composer create-project laravel/laravel store-app
+    ```
+
+2. Enter the following code in the terminal app to run Laravel:
+
+    ```bash
+    cd store-app
+    php artisan serve
+    ```
+
+3. Open your browser and enter the following URL: <http://127.0.0.1:8000> to see the Laravel homepage.
 
 ### References
 
 - <https://laravel.com>
 - <https://learnku.com/docs/laravel/10.x>
 
-## Say Hello to JavaScript
+## Become an Expert
 
-### References
+### JavaScript
+
+JavaScript is a programming language that can be used in many different ways.
+
+#### References
 
 - <https://developer.mozilla.org/zh-CN/docs/Web>
 
-## Say Hello to Linux
+### Say Hello to Linux
 
-### References
+Linux is a free and open-source operating system.
+
+#### References
 
 - 《鸟哥的 Linux 私房菜》
 
-## Become an Expert
+### Say Hello to TailwindCSS
 
-### Say Hello to GitHub Actions
+TailwindCSS is a utility-first CSS framework.
 
-### Say Hello to Docker
+#### References
 
-### References
+- <https://tailwindcss.com>
+
+### GitHub Actions
+
+GitHub Actions is a continuous integration and delivery (CI/CD) tool.
+
+### Docker
+
+Docker is a containerization technology.
+
+### Architecture
+
+#### References
 
 - 《大型网站技术架构：核心原理与案例分析》
