@@ -315,7 +315,9 @@ Follow the steps below to install Laravel and run it.
     ```bash
     pwd
     ```
+
     The output should be:
+
     ```bash
     .../APIStore
     ```
@@ -350,6 +352,16 @@ Follow the steps below to install Laravel and run it.
 - <https://laravel.com>
 - <https://learnku.com/docs/laravel/10.x>
 
+## Build a web application with Laravel
+
+### TailwindCSS
+
+TailwindCSS is a utility-first CSS framework.  
+
+Follow this link to make tailwindcss work with Laravel: <https://tailwindcss.com/docs/guides/laravel>
+
+After that, you need to learn how to build beautiful web pages with tailwindcss and Laravel. Just practice within the store-app project.
+
 ## What is API
 
 ![API](./docs/images/api.png)
@@ -375,10 +387,6 @@ Linux is a free and open-source operating system.
 #### References
 
 - 《鸟哥的 Linux 私房菜》
-
-### Say Hello to TailwindCSS
-
-TailwindCSS is a utility-first CSS framework.
 
 #### References
 
