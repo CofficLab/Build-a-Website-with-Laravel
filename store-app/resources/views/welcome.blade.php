@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>API Store</title>
-    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
@@ -16,23 +14,41 @@
         .card {
             margin: 10px;
         }
+       
     </style>
 </head>
 
 <body>
     <div class="container">
-       
         <div class="row">
             <div class="col-md-12">
                 <div class="alert alert-success" role="alert">
                     Welcome to my awesome API Store
                 </div>
             </div>
-
-          
         </div>
 
-       
+        <form class="form-inline" action="submit_form.php" method="post">
+            <div class="row w-100">
+                <div class="form-group col-md-3 mr-2">
+                    <label for="email" class="mr-2">Email address:</label>
+                    <input type="email" class="form-control w-80" id="email" name="email" required>
+                </div>
+                <div class="form-group col-md-3 mr-2">
+                    <label for="pwd" class="mr-2">Password:</label>
+                    <input type="password" class="form-control w-80" id="pwd" name="password" required>
+                </div>
+                <div class="form-group col-md-3 mr-2">
+                    <label for="pwdConfirm" class="mr-2">Confirm Password:</label>
+                    <input type="password" class="form-control w-80" id="pwdConfirm" name="confirm_password" required>
+                </div>
+                <div class="form-group form-check col-md-1 mr-4"></div>
+                <div class="form-group col-lg-2">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -66,15 +82,8 @@
                     </div>
                 </div>
             </div>
-    
         </div>
     </div>
-
-    
-   
-
-  
-    
 </body>
 
 </html>
