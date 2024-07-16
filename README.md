@@ -310,20 +310,40 @@ Open this page <https://getcomposer.org/download/> and follow the steps to insta
 
 Follow the steps below to install Laravel and run it.
 
-1. Install Laravel by running the following code in the terminal app:
+1. Make sure current directory is the root of this project, run the following code in the terminal app:
+
+    ```bash
+    pwd
+    ```
+    The output should be:
+    ```bash
+    .../APIStore
+    ```
+
+
+2. Install Laravel by running the following code in the terminal app:
 
     ```bash
     composer create-project laravel/laravel store-app
     ```
 
-2. Enter the following code in the terminal app to run Laravel:
+3. Now you have a directory named `store-app` in the current directory.
+
+    ```bash
+    APIStore
+    ├── docs
+    ├── store-app
+    └── ...
+    ```
+
+4. Enter the following code in the terminal app to run Laravel:
 
     ```bash
     cd store-app
     php artisan serve
     ```
 
-3. Open your browser and enter the following URL: <http://127.0.0.1:8000> to see the Laravel homepage.
+5. Open your browser and enter the following URL: <http://127.0.0.1:8000> to see the Laravel homepage.
 
 ### References
 
