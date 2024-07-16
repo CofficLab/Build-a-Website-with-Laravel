@@ -261,6 +261,24 @@ function array_merge_and_sort($a, $b) {
 
 The array `c` should be: `[1,2,3,4,5]`.
 
+### HTTP Server
+
+Create a new file called `http_server.php` in the `docs/php` directory of this project.
+Create a HTTP server that listens on port 8000 with this shell command:
+
+```bash
+php -S localhost:8000 http_server.php
+```
+
+When the user accesses the homepage, print "Hello World!".
+
+```php
+<?php
+// your code here
+```
+
+This is the basic principle of developing web pages.
+
 ## Magical algorithm
 
 How to merge two arrays?
