@@ -362,6 +362,32 @@ Follow this link to make tailwindcss work with Laravel: <https://tailwindcss.com
 
 After that, you need to learn how to build beautiful web pages with tailwindcss and Laravel. Just practice within the store-app project.
 
+## Say Hello to Linux
+
+Linux is a free and open-source operating system which is widely used on servers.
+
+![Linux](./docs/images/linux.png)
+
+### Install Ubuntu
+
+Ubuntu is a free and open-source operating system. It is based on Debian Linux.
+
+`OrbStack` is a software that can help you install Ubuntu on your macOS. Install the software and then install Ubuntu on your computer.
+
+- download and install OrbStack: <https://orbstack.dev>
+- install Ubuntu within the OrbStack App
+
+![OrbStack](./docs/images/orbstack.png)
+
+### Install applications within Ubuntu
+
+- install PHP
+- install Composer
+
+#### References
+
+- 《鸟哥的 Linux 私房菜》
+
 ## What is API
 
 ![API](./docs/images/api.png)
@@ -380,13 +406,7 @@ JavaScript is a programming language that can be used in many different ways.
 
 - <https://developer.mozilla.org/zh-CN/docs/Web>
 
-### Say Hello to Linux
 
-Linux is a free and open-source operating system.
-
-#### References
-
-- 《鸟哥的 Linux 私房菜》
 
 #### References
 
