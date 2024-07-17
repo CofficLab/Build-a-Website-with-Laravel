@@ -6,40 +6,37 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #ADD8E6; /* Baby blue background color */
-            overflow-y: scroll; /* Ensure vertical scroll bar is always visible */
+            background-color: #ADD8E6; /* Light background color */
+            color: #000000; /* Dark text color */
         }
         .container {
             margin-top: 20px;
-            min-height: 100vh; /* Ensure the container takes at least the full viewport height */
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .card {
-            margin: 10px;
         }
         .alert {
             margin-top: 20px;
         }
-        .form-inline {
-            margin-top: 20px;
+        .navbar {
+            background-color: #f8f9fa;
+            color: #000;
         }
-        .form-group {
-            margin-bottom: 10px;
+        .navbar a {
+            color: #000;
         }
-        .card-img-top {
-            height: 150px;
+        .card-deck .card {
+            flex: 1 1 auto;
+            margin-bottom: 20px;
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            height: 200px;
             object-fit: cover;
         }
-        .card-body h5 {
-            font-size: 1.25rem;
-            margin-bottom: 15px;
-        }
-        .card-body p {
-            font-size: 0.9rem;
-            color: #666;
+        .card-body {
+            flex-grow: 1;
         }
         .btn-primary {
             background-color: #007bff;
@@ -49,28 +46,54 @@
             background-color: #0056b3;
             border-color: #0056b3;
         }
-        .header {
-            background-color: #f8f9fa;
-            padding: 15px 20px;
-            border-bottom: 1px solid #e7e7e7;
-            margin-bottom: 20px;
-            border-radius: 8px;
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
         }
-        .back-button {
-            margin: 20px 0;
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>API Store</h1>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">APIStore</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="navigateBack()">Home</a>
+            </li>
+            @auth
+            <li class="nav-item">
+                <a class="nav-link" style="color: black;" href="#">{{ Auth::user()->name }}</a>
+            </li>
+
+                <li class="nav-item">
+                    <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-link">Logout</button>
+                    </form>
+                </li>
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigateTo('register')">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigateTo('login')">Login</a>
+                </li>
+            @endauth
+        </ul>
     </div>
-    <div class="container" id="main-content">
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+</nav>
+
+        
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -81,86 +104,57 @@
                 </ul>
             </div>
         @endif
-
-        <form class="form-inline" action="{{ route('user.store') }}" method="post">
-            @csrf
-            <div class="row w-100">
-                <div class="form-group col-md-4">
-                    <label for="email" class="mr-2">Email address:</label>
-                    <input type="email" class="form-control w-100" id="email" name="email" value="{{ old('email') }}" required>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="pwd" class="mr-2">Password:</label>
-                    <input type="password" class="form-control w-100" id="pwd" name="password" required>
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="password_confirmation" class="mr-2">Confirm Password:</label>
-                    <input type="password" class="form-control w-100" id="password_confirmation" name="password_confirmation" required>
-                </div>
-                <div class="form-group col-md-12 text-right">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                </div>
-            </div>
-        </form>
-
+    <div class="container" id="main-content">
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Country Info">
+                    <img src="https://geology.com/world/world-map.gif" class="card-img-top" alt="Country Info">
                     <div class="card-body">
                         <h5 class="card-title">Country Info API</h5>
                         <p class="card-text">Get detailed information about countries, including demographics, economics, and more.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         <a href="#" class="btn btn-primary" onclick="navigateTo('country-info')">Go Detail</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Area Code">
-                    <div class="card-body">
-                        <h5 class="card-title">Area Code API</h5>
-                        <p class="card-text">Retrieve area code information for any region, including location details and timezone.</p>
-                        <a href="#" class="btn btn-primary" onclick="navigateTo('area-code')">Go Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="IP Region">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/PR/NL/LS/79058348/desktop-computer.jpg" class="card-img-top" alt="IP Region">
                     <div class="card-body">
                         <h5 class="card-title">IP Region API</h5>
                         <p class="card-text">Identify the region associated with an IP address, including country, city, and ISP.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         <a href="#" class="btn btn-primary" onclick="navigateTo('ip-region')">Go Detail</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Stocks">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-a32632a5d0ca56704d44573395cdcef0.webp" class="card-img-top" alt="Area Code">
                     <div class="card-body">
-                        <h5 class="card-title">Financial Stocks API</h5>
-                        <p class="card-text">Up to date information on the latest stock changes.</p>
-                        <a href="#" class="btn btn-primary" onclick="navigateTo('stock-info')">Go Detail</a>
+                        <h5 class="card-title">Area Code API</h5>
+                        <p class="card-text">Retrieve area code information for any region, including location details and timezone.</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#" class="btn btn-primary" onclick="navigateTo('area-code')">Go Detail</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Bank Verification">
+                    <img src="https://www.nyk.com/english/common/img/ir_stock_im02.jpg" class="card-img-top" alt="Stocks">
                     <div class="card-body">
-                        <h5 class="card-title">Bank Cards Verification</h5>
-                        <p class="card-text">Verify Bank Cards with Identity.</p>
-                        <a href="#" class="btn btn-primary" onclick="navigateTo('bank-verification')">Go Detail</a>
+                        <h5 class="card-title">Stock API</h5>
+                        <p class="card-text">Real time stock information with every exchanges</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Historic Weather">
-                    <div class="card-body">
-                        <h5 class="card-title">Historical Weathers</h5>
-                        <p class="card-text">Present the historical weathers of China up to 30 years</p>
-                        <a href="#" class="btn btn-primary" onclick="navigateTo('Hist-weather')">Go Detail</a>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#" class="btn btn-primary" onclick="navigateTo('stocks')">Go Detail</a>
                     </div>
                 </div>
             </div>
@@ -204,44 +198,67 @@
         </ul>
         <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
     </div>
-    <div class="container" id="stock-info" style="display:none;">
+    <div class="container" id="stocks" style="display:none;">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Stock Details</h2>
-        <p>Identify the stock of choice, including the:</p>
+        <h2>Stocks Details</h2>
+        <p>Delivers real time stocks details including various metrics, such as</p>
         <ul>
-            <li>Historical Stats</li>
-            <li>Market Shares</li>
-            <li>Profitability</li>
-            <li>Current Pricing of the Stock</li>
+            <li>Real time stock prices</li>
+            <li>Stock Valuations</li>
+            <li>Market Caps</li>
+            <li>Future Predictabilities</li>
         </ul>
-        <p><strong>Pricing:</strong> $0.02 per request, $20 per 1000 requests.</p>
-    </div>
-    <div class="container" id="bank-verification" style="display:none;">
-        <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Bank Verification API Details</h2>
-        <p>Confirm the account with the user using Identification Verification:</p>
-        <ul>
-            <li>Using 身份证</li>
-            <li>Passport</li>
-            <li>Phone Number Verification</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.01 per request, $10 per 1000 requests.</p>
-    </div>
-    <div class="container" id="Hist-weather" style="display:none;">
-        <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Historic Weather Details</h2>
-        <p>Our database stores a lot of historic weather up to 30 years:</p>
-        <ul>
-            <li>Historical Precipitation</li>
-            <li>Droughts and severe weather trends are available</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.01 per request, $10 per 1000 requests.</p>
+        <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
     </div>
     
+    <div class="container" id="register" style="display:none;">
+        <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
+        <h2>Register</h2>
+        <form action="{{ route('user.store') }}" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="register-email">Email address:</label>
+                <input type="email" class="form-control w-100" id="email" name="email" placeholder="Enter Email" value="{{ old('email') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password:</label>
+                <input type="password" class="form-control w-100" id="pwd" placeholder="Enter Password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password-confirm">Confirm Password:</label>
+                <input type="password" class="form-control w-100" id="password_confirmation" placeholder="Repeat Password" name="password_confirmation" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <div action="{{ route('login') }}" method="post "class="container" id="login" style="display:none;">
+        @csrf
+        <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            @csrf
+            <div class="form-group">
+                <label for="login-email">Email address:</label>
+                <input type="email" class="form-control" id="login-email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" class="form-control" id="login-password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    
+    
+   
+
 
     <script>
         function navigateTo(sectionId) {
-            document.getElementById('main-content').style.display = 'none';
+            document.querySelectorAll('.container').forEach(container => {
+                container.style.display = 'none';
+            });
             document.getElementById(sectionId).style.display = 'block';
         }
 
