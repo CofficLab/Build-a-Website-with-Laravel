@@ -395,4 +395,4 @@ Ubuntu is a free and open-source operating system. It is based on Debian Linux.
 
 Read the following articles to learn more:
 
-![Project.md](./Project.md)
+[Project.md](./Project.md)
