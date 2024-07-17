@@ -14,6 +14,9 @@ class UserController extends Controller
         $request->validate([
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
+        ], [
+            'password.confirmed' => 'Passwords do not match.',
+            'password.min' => 'Password must be at least 6 characters.',
         ]);
 
         // Create a new user

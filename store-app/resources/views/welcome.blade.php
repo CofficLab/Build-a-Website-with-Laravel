@@ -8,7 +8,6 @@
         .container {
             margin-top: 20px;
         }
-
         .card {
             margin: 10px;
         }
@@ -30,12 +29,22 @@
             </div>
         @endif
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form class="form-inline" action="{{ route('user.store') }}" method="post">
             @csrf
             <div class="row w-100">
                 <div class="form-group col-md-3 mr-2">
                     <label for="email" class="mr-2">Email address:</label>
-                    <input type="email" class="form-control w-80" id="email" name="email" required>
+                    <input type="email" class="form-control w-80" id="email" name="email" value="{{ old('email') }}" required>
                 </div>
                 <div class="form-group col-md-3 mr-2">
                     <label for="pwd" class="mr-2">Password:</label>
@@ -51,7 +60,7 @@
                 </div>
             </div>
         </form>
-    
+
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
