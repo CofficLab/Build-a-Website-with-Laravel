@@ -1,12 +1,8 @@
 # Become an Expert
 
-### JavaScript
+Now you know the basic knowledge of web development. Is this an end? 
 
-JavaScript is a programming language that can be used in many different ways.
-
-#### References
-
-- <https://developer.mozilla.org/zh-CN/docs/Web>
+No, it's not. But it is a beginning. There is still a long way to go.
 
 ### GitHub Actions
 
@@ -20,3 +16,4 @@ Docker is a containerization technology.
 
 - 《大型网站技术架构：核心原理与案例分析》
 - <https://github.com/CyC2018/CS-Notes>
+- <https://developer.mozilla.org/zh-CN/docs/Web>
