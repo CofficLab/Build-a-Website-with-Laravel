@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>API Store</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
         .container {
             margin-top: 20px;
@@ -14,10 +12,8 @@
         .card {
             margin: 10px;
         }
-       
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
@@ -28,7 +24,14 @@
             </div>
         </div>
 
-        <form class="form-inline" action="submit_form.php" method="post">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <form class="form-inline" action="{{ route('user.store') }}" method="post">
+            @csrf
             <div class="row w-100">
                 <div class="form-group col-md-3 mr-2">
                     <label for="email" class="mr-2">Email address:</label>
@@ -39,8 +42,8 @@
                     <input type="password" class="form-control w-80" id="pwd" name="password" required>
                 </div>
                 <div class="form-group col-md-3 mr-2">
-                    <label for="pwdConfirm" class="mr-2">Confirm Password:</label>
-                    <input type="password" class="form-control w-80" id="pwdConfirm" name="confirm_password" required>
+                    <label for="password_confirmation" class="mr-2">Confirm Password:</label>
+                    <input type="password" class="form-control w-80" id="password_confirmation" name="password_confirmation" required>
                 </div>
                 <div class="form-group form-check col-md-1 mr-4"></div>
                 <div class="form-group col-lg-2">
@@ -85,5 +88,4 @@
         </div>
     </div>
 </body>
-
 </html>
