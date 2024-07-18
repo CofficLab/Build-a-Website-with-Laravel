@@ -7,7 +7,7 @@ use App\Models\Product;
 
 class deleteAPI extends Command
 {
-    protected $signature = 'product:delete {API}';
+    protected $signature = 'API:delete {API}';
     protected $description = 'Delete a API by its name';
 
     public function handle()
