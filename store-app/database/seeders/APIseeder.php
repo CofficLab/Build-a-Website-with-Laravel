@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Product;
+use App\Models\Product; // Ensure this import is correct
 use Illuminate\Support\Str;
 
 class APIseeder extends Seeder
