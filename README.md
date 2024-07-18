@@ -8,8 +8,8 @@ This project documents the entire process of me developing a website that sells 
 
 1. [Basic Knowledge](./docs/Doc_Basic.md)
 
-2. [The Project](./Doc_Project.md)
+2. [The Project](./docs/Doc_Project.md)
 
-3. [API Products](./Doc_API_Products.md.md)
+3. [API Products](./docs/Doc_API.md)
 
-4. [Be Professional](./Doc_Expert.md)
+4. [Be Professional](./docs/Doc_Expert.md)

@@ -10,7 +10,7 @@ Now modify the code in store-app directory to build a web application as shown i
 
 ## HomePage
 
-![HomePage](./docs/images/homepage.png)
+![HomePage](./images/homepage.png)
 
 ### Requirements
 
@@ -52,7 +52,7 @@ Now modify the code in store-app directory to build a web application as shown i
 
 ## Register Page
 
-![RegisterPage](./docs/images/registerpage.png)
+![RegisterPage](./images/registerpage.png)
 
 ### Requirements
 
@@ -66,7 +66,7 @@ Now modify the code in store-app directory to build a web application as shown i
 
 ## Login Page
 
-![LoginPage](./docs/images/loginpage.png)
+![LoginPage](./images/loginpage.png)
 
 ### Requirements
 
@@ -82,11 +82,11 @@ Now modify the code in store-app directory to build a web application as shown i
 
 ### What is API
 
-![API](./docs/images/api.png)
+![API](./images/api.png)
 
 ### What is HTTP
 
-![HTTP](./docs/images/http.png)
+![HTTP](./images/http.png)
 
 
 ## Summary

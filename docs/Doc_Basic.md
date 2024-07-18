@@ -110,7 +110,7 @@ Please refer to <https://desktop.github.com> for more information.
 
 After installation is complete, try to open this project with GitHub Desktop with the following steps:
 
-![GitHub Desktop](./docs/images/github_desktop.jpg)
+![GitHub Desktop](./images/github_desktop.jpg)
 
 ### Install Visual Studio Code
 
@@ -122,7 +122,7 @@ Please refer to <https://code.visualstudio.com> for more information.
 
 After installation is complete, try to open this project with Visual Studio Code with the following steps:
 
-![Visual Studio Code](./docs/images/vscode.png)
+![Visual Studio Code](./images/vscode.png)
 
 Now, you can see all the code of this project.
 
@@ -365,7 +365,7 @@ After that, you need to learn how to build beautiful web pages with tailwindcss 
 
 Linux is a free and open-source operating system which is widely used on servers.
 
-![Linux](./docs/images/linux.png)
+![Linux](./images/linux.png)
 
 ### Install Ubuntu
 
@@ -376,7 +376,7 @@ Ubuntu is a free and open-source operating system. It is based on Debian Linux.
 - download and install OrbStack: <https://orbstack.dev>
 - install Ubuntu within the OrbStack App
 
-![OrbStack](./docs/images/orbstack.png)
+![OrbStack](./images/orbstack.png)
 
 ### Install applications within Ubuntu
 
