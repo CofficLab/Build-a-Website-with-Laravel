@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Product; // Adjust based on your model namespace
 use Illuminate\Http\Request;
 
-class ExampleController extends Controller
+class ProductController extends Controller
 {
     public function index()
     {

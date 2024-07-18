@@ -232,7 +232,8 @@
             </div>
         </div>
     </div>
-    <div class="container" id="main-content">
+    <!-- CYCLE THROUGH THE BACKEND API DATA --> 
+<div class="container" id="main-content">
     <div class="row">
         @foreach($apis as $api)
             <div class="col-md-4">
@@ -252,7 +253,7 @@
     </div>
 </div>
 
-    @foreach($apis as $api)
+@foreach($apis as $api)
     <div class="container" id="{{ strtolower($api->name) }}" style="display:none;">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
         <div class="card">
@@ -265,7 +266,7 @@
         </div>
     </div>
 @endforeach
-   
+
     
     <div class="container" id="register" style="display:none;">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
@@ -321,6 +322,7 @@
                 container.style.display = 'none';
             });
             document.getElementById('main-content').style.display = 'block';
+            
         }
     </script>
 </body>
