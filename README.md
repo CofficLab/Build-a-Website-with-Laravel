@@ -1,4 +1,4 @@
-# APIStore
+# Build a Website with Laravel
 
 This project documents the entire process of me developing a website that sells APIs. It would be my great honor if it can help you.
 
