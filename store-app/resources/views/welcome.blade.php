@@ -59,29 +59,32 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">APIStore</a>
-    <div class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="navigateBack()">Home</a>
             </li>
             @auth
             <li class="nav-item">
-                <a class="nav-link" style="color: black;" href="#">{{ Auth::user()->name }}</a>
+                <a class="nav-link" href="#" style="color: white;">{{ Auth::user()->name }}</a>
             </li>
-
-                <li class="nav-item">
-                    <form action="{{ route('logout') }}" method="POST">
+            <li class="nav-item">
+                <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-link">Logout</button>
-                    </form>
-                </li>
+                </form>
+            </li>
             @else
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('register')">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigateTo('login')">Login</a>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="navigateTo('register')">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="navigateTo('login')">Login</a>
+            </li>
             @endauth
         </ul>
     </div>
@@ -105,20 +108,20 @@
             </div>
         @endif
     <div class="container" id="main-content">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://geology.com/world/world-map.gif" class="card-img-top" alt="Country Info">
-                    <div class="card-body">
-                        <h5 class="card-title">Country Info API</h5>
-                        <p class="card-text">Get detailed information about countries, including demographics, economics, and more.</p>
-                    </div>
-                    <div class="card-footer">
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary" onclick="navigateTo('country-info')">Go Detail</a>
-                    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://geology.com/world/world-map.gif" class="card-img-top" alt="Country Info">
+                <div class="card-body">
+                    <h5 class="card-title">Country Info API</h5>
+                    <p class="card-text">Get detailed information about countries, including demographics, economics, and more.</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <a href="#" class="btn btn-primary" onclick="navigateTo('country-info')">Go Detail</a>
                 </div>
             </div>
+        </div>
             <div class="col-md-4">
                 <div class="card">
                     <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/PR/NL/LS/79058348/desktop-computer.jpg" class="card-img-top" alt="IP Region">
@@ -162,54 +165,107 @@
     </div>
 
     <!-- New Screens -->
-    <div class="container" id="country-info" style="display:none;">
+    <div class="container" id="country-info">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Country Info API Details</h2>
-        <p>Get detailed information about countries, including:</p>
-        <ul>
-            <li>Demographics</li>
-            <li>Economic Indicators</li>
-            <li>Geographical Information</li>
-            <li>Historical Data</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.01 per request, $10 per 1000 requests.</p>
+            <div class="card">
+            <img src="https://geology.com/world/world-map.gif" class="card-img-top" alt="Country Info">
+                <div class="card-body">
+                <h2 class="card-title">Country Info API Details</h2>
+                <p class="card-text">Get detailed information about countries, including:</p>
+                <ul>
+                    <li>Demographics</li>
+                    <li>Economic Indicators</li>
+                    <li>Geographical Information</li>
+                    <li>Historical Data</li>
+                </ul>
+                <p><strong>Pricing:</strong> $0.01 per request, $10 per 1000 requests.</p>
+            </div>
+        </div>
     </div>
-    <div class="container" id="area-code" style="display:none;">
+    <div class="container" id="ip-region">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Area Code API Details</h2>
-        <p>Retrieve area code information, including:</p>
-        <ul>
-            <li>Location Details</li>
-            <li>Timezone Information</li>
-            <li>Associated Cities and Regions</li>
-            <li>Carrier Information</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            <div class="card">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/6/PR/NL/LS/79058348/desktop-computer.jpg" class="card-img-top" alt="IP Region Info">
+                <div class="card-body">
+                <h2 class="card-title">IP REGION API Details</h2>
+                <p class="card-text">Identify the region associated with an IP address, including country, city, and ISP:</p>
+                <ul>
+                    <li>Accurate IP Addresses</li>
+                    <li>Cross Country in seconds</li>
+                    <li>Reliable and Precise</li>
+                </ul>
+                <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            </div>
+        </div>
     </div>
-    <div class="container" id="ip-region" style="display:none;">
+    <div class="container" id="area-code">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>IP Region API Details</h2>
-        <p>Identify the region associated with an IP address, including:</p>
-        <ul>
-            <li>Country</li>
-            <li>City</li>
-            <li>ISP</li>
-            <li>Latitude and Longitude</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            <div class="card">
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-a32632a5d0ca56704d44573395cdcef0.webp" class="card-img-top" alt="IP Region Info">
+                <div class="card-body">
+                <h2 class="card-title">Area Code API Details</h2>
+                <p class="card-text">Retrieve area code information, including:</p>
+                <ul>
+                    <li>Location Details</li>
+                    <li>Timezone Information</li>
+                    <li>Associated Cities and Regions</li>
+                    <li>Carrier Information</li>
+                </ul>
+                <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            </div>
+        </div>
     </div>
-    <div class="container" id="stocks" style="display:none;">
+    <div class="container" id="stocks">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
-        <h2>Stocks Details</h2>
-        <p>Delivers real time stocks details including various metrics, such as</p>
-        <ul>
-            <li>Real time stock prices</li>
-            <li>Stock Valuations</li>
-            <li>Market Caps</li>
-            <li>Future Predictabilities</li>
-        </ul>
-        <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            <div class="card">
+            <img src="https://www.nyk.com/english/common/img/ir_stock_im02.jpg" class="card-img-top" alt="Stock  Info">
+                <div class="card-body">
+                <h2 class="card-title">Stocks Details</h2>
+                <p class="card-text">Delivers real time stocks details including various metrics, such as:</p>
+                <ul>
+                    <li>Real time stock prices</li>
+                    <li>Stock Valuations</li>
+                    <li>Market Caps</li>
+                    <li>Future Predictabilities</li>
+                </ul>
+                <p><strong>Pricing:</strong> $0.005 per request, $5 per 1000 requests.</p>
+            </div>
+        </div>
     </div>
+    <div class="container" id="main-content">
+    <div class="row">
+        @foreach($apis as $api)
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://placeholder.com/200x150" class="card-img-top" alt="API Placeholder Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $api->name }}</h5>
+                        <p class="card-text">{{ $api->description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text"><small class="text-muted">Last updated {{ $api->updated_at->diffForHumans() }}</small></p>
+                        <a href="#" class="btn btn-primary" onclick="navigateTo('{{ strtolower($api->name) }}')">Go Detail</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+
+    @foreach($apis as $api)
+    <div class="container" id="{{ strtolower($api->name) }}" style="display:none;">
+        <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
+        <div class="card">
+            <img src="https://placeholder.com/200x150" class="card-img-top" alt="API Placeholder Image">
+            <div class="card-body">
+                <h2 class="card-title">{{ $api->name }} Details</h2>
+                <p class="card-text">{{ $api->detailed_description }}</p>
+                <p><strong>Pricing:</strong> {{ $api->pricing }}</p>
+            </div>
+        </div>
+    </div>
+@endforeach
+   
     
     <div class="container" id="register" style="display:none;">
         <button class="btn btn-secondary back-button" onclick="navigateBack()">Back</button>
@@ -249,8 +305,6 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </div>
-    
-    
    
 
 
