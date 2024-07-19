@@ -6,10 +6,10 @@ This project documents the entire process of me developing a website that sells 
 
 ## All Documents
 
-1. [Basic Knowledge](./docs/Doc_Basic.md)
+1. [Basic Knowledge](./docs/basic.md)
 
-2. [The Project](./docs/Doc_Project.md)
+2. [The Project](./docs/project.md)
 
-3. [API Products](./docs/Doc_API.md)
+3. [API Products](./docs/api.md)
 
-4. [Be Professional](./docs/Doc_Expert.md)
+4. [Be Professional](./docs/expert.md)
