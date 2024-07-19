@@ -4,8 +4,14 @@ API Products
 **What is API**
 ---------------
 
+![API](./images/api.png)
+
 **What is HTTP**
 ----------------
+
+HTTP is a protocol for transferring data.
+
+![HTTP](./images/http.png)
 
 Country Info API
 ----------------
