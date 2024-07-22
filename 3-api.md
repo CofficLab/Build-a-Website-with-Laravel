@@ -42,6 +42,15 @@ Maybe you have no idea where to get the data, here is the answer:
 
 [https://github.com/wyq2214368/country-info](https://github.com/wyq2214368/country-info)
 
+### Production-ready
+
+Please consider the following aspects:
+
+- What if the user inputs a very long keyword
+
+- What if the user makes 10,000 requests in 1 second
+
+- Is there a limit on request freque
 ### Attentions
 
 * You should create a **README.md** file
