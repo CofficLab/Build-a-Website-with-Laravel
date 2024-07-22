@@ -50,7 +50,8 @@ Please consider the following aspects:
 
 - What if the user makes 10,000 requests in 1 second
 
-- Is there a limit on request freque
+- Is there a limit on request frequency
+
 ### Attentions
 
 * You should create a **README.md** file
